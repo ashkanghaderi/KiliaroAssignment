@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Album Item View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AlbumItemViewController" id="Y6W-OH-hqX" customClass="AlbumItemViewController" customModule="KiliaroTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jjr-RB-3ch">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNe-U7-tFm">
+                                <rect key="frame" x="16" y="76" width="41.5" height="32"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="onBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Nv8-VO-viL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DV0-GI-tTl">
+                                <rect key="frame" x="207" y="830" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="zaW-7B-Zlh">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="PwM-yc-5SH"/>
+                                    <constraint firstAttribute="height" constant="50" id="ze6-iG-tIF"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PNe-U7-tFm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="0aq-el-QLP"/>
+                            <constraint firstItem="jjr-RB-3ch" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="1Iv-9I-M1Y"/>
+                            <constraint firstItem="jjr-RB-3ch" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="8Xi-bl-OBu"/>
+                            <constraint firstAttribute="bottom" secondItem="jjr-RB-3ch" secondAttribute="bottom" id="BzT-5d-gJy"/>
+                            <constraint firstItem="DV0-GI-tTl" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JvN-Jw-pNI"/>
+                            <constraint firstAttribute="trailing" secondItem="jjr-RB-3ch" secondAttribute="trailing" id="cPR-CL-K3M"/>
+                            <constraint firstItem="zaW-7B-Zlh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="dpF-pG-dSB"/>
+                            <constraint firstItem="zaW-7B-Zlh" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="fhx-Ti-y4z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DV0-GI-tTl" secondAttribute="bottom" constant="32" id="iou-wU-lzr"/>
+                            <constraint firstItem="PNe-U7-tFm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="okc-pm-JhV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="PNe-U7-tFm" id="ddN-sm-MJi"/>
+                        <outlet property="createdDate" destination="DV0-GI-tTl" id="3L7-Pr-wWT"/>
+                        <outlet property="imageView" destination="jjr-RB-3ch" id="e6E-6Q-Tfm"/>
+                        <outlet property="mainIndicator" destination="zaW-7B-Zlh" id="AWJ-Of-Z1y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="44"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
